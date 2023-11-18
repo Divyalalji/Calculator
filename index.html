@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+    body{
+        background-color:rgb(202, 233, 243);
+    }
+        .abc{
+           color: white;
+           font-size: 40px;
+           margin-top: 10px;
+        }
+        .b1{
+            font-size: 30px;
+            width: 55px;
+            margin-left:6px;
+            border-radius: 8px;
+            box-shadow: 4px 4px 2px  rgb(240, 227, 227);
+            text-shadow: 4px 4px 2px  rgb(124, 107, 29);
+
+            
+        }
+        .b1:hover{
+            background-color: brown;
+            color: bisque;
+        }
+        .b2{
+            margin-left: 30%;
+        }
+        .b3{
+            margin-left: 60%;
+        }
+        .b4{
+            margin-left: 90%;
+        }
+        .b5{
+            background-color: goldenrod;
+        }
+        .xyz{
+            height: 300px;
+            width: 300px;
+            border: 7px;
+            border-style:solid;
+            border-color: rgb(100, 95, 95);
+            margin-left: 38%;
+            background-color: black ;
+            margin-top: 5%;
+            border-radius: 10px;
+            box-shadow: 6px 6px 4px  rgb(27, 11, 11);
+
+        }
+        .W1{
+            width: 92%;
+            height: 35px;
+            margin-top: 18px;
+            background-color: rgb(113, 243, 178);
+            text-align: end;
+            color: rgb(216, 216, 216);
+            border-radius: 10px;
+            margin-bottom: 0px;
+            margin-left:8px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: larger;
+        }
+        
+        
+        
+        
+    </style>
+  
+</head>
+<body>
+    <h1 style="text-align: center; font-weight: bolder;">Calculator</h1>
+    <div class="xyz">
+        <form  name="form1">
+       <input class="W1"  name="textv">
+    </form>
+    <table class="abc">
+        
+        <tr>
+           
+            <td> <input class = "b1" type = "button" value = "7" onclick = "ins(7)" > </td>
+            <td> <input class = "b1 b2" type = "button" value = "8" onclick = "ins(8)" > </td>
+            <td> <input class = "b1 b3" type = "button" value = "9" onclick = "ins(9)" > </td>
+            <td> <input class = "b1 b4" type = "button" value = "/" onclick = "ins('/')" > </td>
+           
+        </tr>
+        <tr>
+            <td> <input class = "b1" type = "button" value = "4" onclick = "ins(4)" > </td>
+            <td> <input class = "b1 b2" type = "button" value = "5" onclick = "ins(5)" > </td>
+            <td> <input class = "b1 b3" type = "button" value = "6" onclick = "ins(6)" > </td>
+            <td> <input class = "b1 b4" type = "button" value = "X" onclick = "ins('*')" > </td>
+        </tr>
+        <tr>
+            
+
+            <td> <input class = "b1" type = "button" value = "1" onclick = "ins(1)" > </td>
+            <td> <input class = "b1 b2" type = "button" value = "2" onclick = "ins(2)" > </td>
+            <td> <input class = "b1 b3" type = "button" value = "3" onclick = "ins(3)" > </td>
+            <td> <input class = "b1 b4" type = "button" value = "-" onclick = "ins('-')" > </td>
+        </tr>
+        <tr>
+            
+
+            <td> <input class = "b1" type = "button" value = "0" onclick = "ins(0)" > </td>
+            <td> <input class = "b1 b2" type = "button" value = "." onclick = "ins('.')" > </td>
+            <td> <input class = "b1 b3" type = "button" value = "+" onclick = "ins('+')" > </td>
+            <td> <input class = "b1 b4" type = "button"  value = "=" onclick = "equal()" > </td>
+        </tr>
+        
+        
+    </table>
+    </div>
+
+  <!-- JavaScript Code -->
+<script>
+
+    // Use ins() function to ins the number in textv.
+    function ins(num) 
+    {
+    document.form1.textv.value = document.form1.textv.value + num;
+    }
+    
+    // Use equal() function to return the result based on passed values.
+    function equal()
+    {
+    var exp = document.form1.textv.value;
+    if(exp)
+    {
+    document.form1.textv.value = eval(exp)
+    }
+    }
+    
+    
+    </script>
+    
+    
+
+    
+</body>
+</html>
